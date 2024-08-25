@@ -15,7 +15,7 @@ Tools & Libraries: Utilized the power of .NET Core's built-in Identity framework
 Focus: Continuously practicing and improving authentication and authorization techniques to ensure robust security measures. Open to adding and pushing more functionalities to enhance the module's capabilities and meet evolving security needs.
 
 🚀 Goals & Interests
-I am always eager to learn new technologies and best practices in the realm of web development and cybersecurity. I enjoy contributing to projects that make a positive impact and am particularly interested in cloud computing, microservices architecture, and API security.
+I am always eager to learn new technologies and best practices in the realm of web development . I enjoy contributing to projects that make a positive impact and am particularly interested in API security.
 
 Feel free to explore my repositories to see some of my work in action, and don't hesitate to reach out for collaboration opportunities!
 
