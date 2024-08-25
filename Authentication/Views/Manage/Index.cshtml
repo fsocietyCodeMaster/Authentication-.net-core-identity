@@ -1,0 +1,87 @@
+﻿@using Authentication.Customized
+@model IEnumerable<CustomUser>
+@{
+
+    <table class="table table-bordered table-striped">
+
+
+        <tr>
+            <td>Username</td>
+
+            <td>FullName</td>
+
+            <td>Phone</td>
+
+            <td>Address</td>
+
+            <td>Age</td>
+
+            <td>ManageRole</td>
+
+            <td>DeleteUser</td>
+
+            <td>UpdateUser</td>
+
+            <td>UpdatePass</td>
+        </tr>
+        @if (Model.Any())
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.UserName</td>
+                    <td>@item.FullName</td>
+                    <td>@item.Phone</td>
+                    <td>@item.Address</td>
+                    <td>@item.Age</td>
+                    <td>
+                        <form method="get" asp-controller="roles" asp-action="userrole">
+                            <input type="hidden" value="@item.Id" name="id" />
+                            <button type="submit" class="btn btn-primary">MangeRole</button>
+
+                        </form>
+                    </td>
+
+                    <td>
+                        <form asp-action="Delete" method="post">
+
+                            <input type="hidden" value="@item.Id" name="id" />
+                            <button type="submit" class="btn btn-danger">Delete</button>
+
+                        </form>
+
+                    </td>
+
+                    <td>
+                        <form asp-action="Update" method="get">
+
+                            <input type="hidden" value="@item.Id" name="id" />
+                            <button type="submit" class="btn btn-secondary">UpdateUser</button>
+
+                        </form>
+
+                    </td>
+
+                    <td>
+                        <form asp-action="ChangePass" method="get">
+
+                            <input type="hidden" value="@item.Id" name="id" />
+                            <button type="submit" class="btn btn-warning">UpdatePass</button>
+
+                        </form>
+
+                    </td>
+
+                </tr>
+
+            }
+        }
+        else
+        {
+
+            <tr>
+                <td colspan="7">No any Users</td>
+            </tr>
+        }
+    </table>
+}

@@ -1,0 +1,50 @@
+﻿@model ChangingPassViewModel
+@{
+
+    <table class="table table-striped table-bordered">
+    
+    <tr>
+    <td>Username</td>
+
+    <td>Email</td>
+    
+    </tr>
+ 
+    <tr>
+
+        <td>@Model.CurrentUser.UserName</td>
+
+        <td>@Model.CurrentUser.Email</td>
+    
+    </tr>
+    
+    </table>
+    <form method="post" asp-action="ChangePass">
+
+        <input type="hidden" asp-for="CurrentUser.Id" />
+        <div asp-validation-summary="All" class="text-danger">
+
+            <div>
+
+                <label asp-for="CurrentPassword" class="form-group"></label>
+                <input type="text" asp-for="CurrentPassword" class="form-control" />
+
+
+            </div>
+
+
+
+            <div>
+
+                <label asp-for="NewPassword" class="form-group"></label>
+                <input type="text" asp-for="NewPassword" class="form-control" />
+
+
+            </div>
+
+            <button type="submit" class="btn btn-success">Change</button>
+
+        </div>
+    </form>
+
+}

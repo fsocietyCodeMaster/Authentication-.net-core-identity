@@ -1,0 +1,47 @@
+﻿@model UpdateUserVIewModel
+
+@{
+
+    <form  asp-action="Update" method="post">
+
+        <input type="hidden" asp-for="CurrentUser.Id"  />
+
+        <div asp-validation-summary="All" class="text-danger">
+
+            <div>
+
+                <label asp-for="CurrentUser.FullName" class="form-group"></label>
+                <input type="text" asp-for="CurrentUser.FullName" class="form-control" />
+
+            </div>
+
+
+
+            <div>
+
+                <label asp-for="CurrentUser.Phone" class="form-group"></label>
+                <input type="text" asp-for="CurrentUser.Phone" class="form-control" />
+
+            </div>
+
+
+            <div>
+
+                <label asp-for="CurrentUser.Address" class="form-group"></label>
+                <input type="text" asp-for="CurrentUser.Address" class="form-control" />
+
+            </div>
+
+
+            
+            <button  type="submit" class="btn btn-success">Update</button>
+            
+
+        </div>
+
+
+
+
+    </form>
+
+}

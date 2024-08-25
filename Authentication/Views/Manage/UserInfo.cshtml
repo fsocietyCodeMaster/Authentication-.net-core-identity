@@ -1,0 +1,34 @@
+﻿@{
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <table class="table table-bordered table-striped">
+
+
+            <tr>
+
+                <td>Name</td>
+
+                <td>@User.Identity.Name</td>
+            </tr>
+
+
+            @foreach (var item in User.Claims)
+            {
+                <tr>
+                    
+                    <td>@item.Type</td>
+                    <td>@item.Value</td>
+
+                </tr>
+
+            }
+
+
+        </table>
+    }
+    else
+    {
+        <h1>User Is not Login.</h1>
+    }
+}

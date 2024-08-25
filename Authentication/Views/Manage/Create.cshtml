@@ -1,0 +1,65 @@
+﻿@model UserViewModel
+
+@{
+    <form method="post" asp-action="Create">
+
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<div>
+
+    <label asp-for="UserName" class="form-group"></label>
+    <input type="text" asp-for="UserName" class="form-control" />
+
+</div>
+
+
+<div>
+
+    <label asp-for="Age" class="form-group"></label>
+    <input type="text" asp-for="Age" class="form-control" />
+
+</div>
+
+
+<div>
+
+    <label asp-for="FullName" class="form-group"></label>
+    <input type="text" asp-for="FullName" class="form-control" />
+
+</div>
+
+
+<div>
+
+    <label asp-for="Phone" class="form-group"></label>
+    <input type="text" asp-for="Phone" class="form-control" />
+
+</div>
+
+
+<div>
+
+    <label asp-for="Email" class="form-group"></label>
+    <input type="text" asp-for="Email" class="form-control" />
+
+</div>
+
+        <div>
+
+            <label asp-for="Address" class="form-group"></label>
+            <input type="text" asp-for="Address" class="form-control" />
+
+        </div>
+
+<div>
+
+    <label asp-for="Password" class="form-group"></label>
+    <input type="text" asp-for="Password" class="form-control" />
+
+</div>
+
+<button class="btn btn-success">create</button>
+
+    </form>
+
+}
