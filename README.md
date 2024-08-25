@@ -11,7 +11,7 @@ Features:
 Secure user registration and login with password hashing and salting.
 Role management to define different levels of access and permissions.
 Claims-based authorization to allow dynamic control over resource access.
-Tools & Libraries: Utilized the power of .NET Core's built-in Identity framework and ASP.NET Core Middleware for streamlined security implementations.
+Tools & Libraries: Utilized the power of .NET Core's built-in Identity framework.
 Focus: Continuously practicing and improving authentication and authorization techniques to ensure robust security measures. Open to adding and pushing more functionalities to enhance the module's capabilities and meet evolving security needs.
 
 🚀 Goals & Interests
